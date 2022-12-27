@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://kit.fontawesome.com/2e6c43e463.js" crossorigin="anonymous"></script> <!-- font awesome-->
+</head>
+<body class="bg-black text-amber-50">
+    <nav class="p-5 md-flex md:items-center md:justify-between">
+        <div class="flex items-center justify-between">
+            <span class="w-36">
+                <img    src="https://gratisography.com/wp-content/uploads/2022/07/gratisography-trash-can-20-free-stock-photo-800x525.jpg" 
+                        alt="logo"
+                        class="w-36"
+                />
+            </span>
+            <span class="text-2xl md:hidden">
+                <i class="fa-solid fa-bars" onclick="siderbar(this)"></i>
+            </span>
+        </div>
+        <ul class="md:flex md:items-center z-[-1] md:z-auto md:static absolute w-full left-0 md:w-auto md:py-0 py-4 md:pl-0 pl-7 md:opacity-100 opacity-0 top-[-400px]">   <!-- z-index: -1 is used for the components to be hidden in the bars button -->
+            <li class="mx-4 my-5 md:my-0">
+                <a href="" class="text-xl hover:text-yellow-400 duration-100">
+                    Home
+                </a>
+            </li>
+            <li class="mx-4 my-5 md:my-0">
+                <a href="" class="text-xl hover:text-yellow-400 duration-100">
+                    Services
+                </a>
+            </li>
+            <li class="mx-4 my-5 md:my-0">
+                <a href="" class="text-xl hover:text-yellow-400 duration-100">
+                    Blog
+                </a>
+            </li>
+            <li class="mx-4 my-5 md:my-0">
+                <a href="" class="text-xl hover:text-yellow-400 duration-100">
+                    Gallery
+                </a>
+            </li>
+            <li class="mx-4 my-5 md:my-0">
+                <a href="" class="text-xl hover:text-yellow-400 duration-100">
+                    About
+                </a>
+            </li>
+            <li class="mx-4 my-5 md:my-0">
+                <a href="" class="text-xl hover:text-yellow-400 duration-100">
+                    Login
+                </a>
+            </li>
+            <button class="bg-lime-400 text-black p-2 rounded-md hover:bg-lime-500 duration-100">
+                Sign Up
+            </button>
+        </ul>
+    </nav>
+
+    <!-- Banner Section -->
+    <section>
+        <ul>
+            <li>Home</li>
+            <li>Website Design</li>
+        </ul>
+    </section>
+
+    <script>
+        function siderbar(x){
+            let list = document.querySelector("ul");
+            x.name == "menu"
+            ? ((x.name = "close"),
+            list.classList.add("top-[80px]"),
+            list.classList.add("opacity-100"))
+            : ((x.name = "menu"),
+            list.classList.remove("top-[80px]"),
+            list.classList.remove("opacity-100"));
+        }
+    </script>
+</body>
+</html>
